@@ -1,0 +1,18 @@
+<div class="table-responsive">
+        <table class="table ">
+               <thead>
+                   <tr class="table-active">
+                     <th scope="col"
+                          *ngFor="let cl of columns">
+                        {{cl}}  
+                     </th>
+                   </tr>
+               </thead>
+                
+            
+                  <ng-content></ng-content>  
+                
+        </table>
+ </div>
+
+  

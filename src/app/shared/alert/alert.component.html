@@ -1,0 +1,3 @@
+<div *ngFor = "let info of alerts" class="text-center sombra {{fGetAlertClass(info)}}" >
+  <i class='{{fGetIcon(info)}}'></i>  {{info.msg}}
+</div>

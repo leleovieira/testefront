@@ -1,0 +1,87 @@
+ 
+    <app-leo-card title="Adicionar nota">
+            <form [formGroup]="formnotas" class="form-nota"  (submit)="fAdionaLista()"  autocomplete="off">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12">
+                            <div class="form-group h-25">
+                                <small>LOJA</small>
+                                <input
+                                    class="form-control  form-control-sm" 
+                                    formControlName="loja"  autocomplete="off"
+                                    type="text" placeholder="Razão Social , nome fantasia ou CNPJ">
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div class="row">
+                            <div class="col-xs-12 col-lg-2">
+                                <div class="form-group">
+                                    <small for="nonota">NO DA NOTA</small>
+                                    <input     
+                                            class="form-control form-control-sm"   formControlName="nonota"
+                                              type="text">
+                                </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-3">
+                                <div class="form-group">
+                                    <small for="datanota">DATA DA NOTA</small>
+                                    <input   
+                                        class="form-control form-control-sm"    formControlName="datanota"
+                                         type="date">
+                                </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-3">
+                            <div class="form-group">
+                                <small for="tiLOJA">FORMA DE PAGAMENTO</small>
+                                <select  formControlName="tipopagamento"
+                                        
+                                        class="form-control form-control-sm">
+                                        <option *ngFor="let dp of dpTIPOPAGAMENTO"
+                                                 value= '{{dp.CAMPO}}'>
+                                                {{dp.DESCRICAO}}
+                                        </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-4">
+                                <div class="form-group">
+                                    <small for="tiLOJA">VALOR</small>
+                                    <div class="input-group  areavalor">
+                                            R$
+                                            <input type="number" step="any" formControlName="valor"
+                                             class="ml-2 form-control form-control-sm" >
+                                    </div> 
+                                 </div>                             
+                        </div>
+                    </div>
+                    <app-leo-btn-toolbar (onclear)="fLimpaNota()"></app-leo-btn-toolbar>
+             </form>
+     </app-leo-card>
+    
+     <app-leo-card   title='Cadastrar notas' subtitle="Você precisa confirmar o cadastro desta lista de notas">
+                  <app-leo-table-repositive [columns]="tabletitle" (dplista)="dpListaNota">
+                         <tr *ngFor="let dp of dpListaNota ;index as i; ">
+                                        <td>{{dp.loja}}</td>
+                                        <td>{{dp.nonota}}</td>
+                                        <td>{{dp.datanota | date:'dd/MM/yyyy'}} {{dp.cadastro | date:'h:mm:ss'}}</td>
+                                        <td>{{dp.cadastro | date:'dd/MM/yyyy h:mm:ss'}}</td>
+                                        <td>{{dp.valor|currency:'BRL':true}}</td>
+                                        <td>
+                                             <app-leo-dropdown  (onremove)="fRemoveNota($event,dp)"></app-leo-dropdown>
+                                        </td>
+                        </tr>
+                 </app-leo-table-repositive>
+                 <app-leo-btn-toolbar (onclear)="fLimpaListaNota($event)"
+                                  (onconfirm)="fSalvaLista($event)"
+                                  *ngIf="dpListaNota.length>0" >
+                 </app-leo-btn-toolbar>
+     </app-leo-card> 
+ 
+
+ 
+<!-- Example single danger button -->
+
+
+ 
+     

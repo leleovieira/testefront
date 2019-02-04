@@ -1,0 +1,13 @@
+.placar label{
+    height: 1%!important;
+}
+
+.placar small{
+   font-size: 10px;
+}
+
+.placar  strong{
+   font-size: 14px;
+   font-weight: bold;
+   color:black;
+}

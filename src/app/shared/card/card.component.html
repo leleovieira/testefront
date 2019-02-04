@@ -1,0 +1,9 @@
+<div class="card mb-3 mt-3">
+        <div class="card-body">
+             <h5 class="card-title">
+                 {{title}}
+                 <p *ngIf="!!subtitle"class="mt-2"><small>{{subtitle}}</small></p>
+             </h5>
+             <ng-content></ng-content>
+        </div>
+</div>

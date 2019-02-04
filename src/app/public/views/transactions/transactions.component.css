@@ -1,0 +1,31 @@
+.form-nota .form-group small{
+  font-size: 10px;
+  font-weight: bold;
+  color:black;
+ }
+ 
+ 
+.form-nota .form-group .form-control{
+   border: 1px solid white !important;
+   border-bottom: 1px solid black !important;
+}
+
+.form-nota  .areavalor{
+  border: 1px solid white !important;
+  border-bottom: 1px solid black !important;
+ 
+}
+
+.form-nota  .areavalor .form-control{
+  border: 1px solid white !important;
+  border-bottom: 1px solid transparent !important;
+ 
+}
+
+.input-group-text {
+  background-color: #FFFFFF!important;
+  color:#000;
+  font-weight: bold;
+  border:1px solid transparent!important;
+  font-size: 9px;
+}

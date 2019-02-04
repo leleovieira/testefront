@@ -1,0 +1,18 @@
+
+.area-detalhes-profile .item small{
+    font-weight: bold;
+    font-size:9px;
+  }
+  
+  .area-detalhes-profile .item p{
+   
+    font-size:12px;
+  }
+  
+  
+  .area-detalhes-profile .item {
+    border:1px solid #ddd; 
+    padding: 10px 10px;
+  }
+  
+

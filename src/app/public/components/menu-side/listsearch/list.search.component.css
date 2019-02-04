@@ -1,0 +1,37 @@
+.card-text{
+    font-weight: bold;
+    font-size:13px;
+}
+.card-body{
+    padding-top:15px;
+    padding-bottom:25px;
+}
+.card{
+    border-bottom:1px solid #ddd!important;
+}
+
+
+.lista-pesq {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .lista-pesq li a {
+    border: 1px solid #ddd;  
+    margin-top: -1px; 
+    background-color: #F4F5F7;  
+    padding: 12px;  
+    text-decoration: none;  
+    font-size: 18px;  
+    color: black;  
+    display: block; 
+  }
+  
+  .lista-pesq li a:hover:not(.header) {
+    background-color: #F4F5F7; 
+  }
+  
+  .lista-pesq .card-body{
+    background-color: #F4F5F7; 
+  }

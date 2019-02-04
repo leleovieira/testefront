@@ -1,0 +1,13 @@
+ <div  class="area-menu">
+     <div class="area-pesquisa"  *ngIf="vExibir">
+        <app-leo-input-query (ontype)="vQuery=$event"></app-leo-input-query>
+
+        <app-leo-listsearch (selecionado)="fSelecionaCliente($event)"
+                        [dplistagem]='dpLista'
+                        [vPesq]="vQuery" >
+        </app-leo-listsearch>
+    </div>
+    <div class="area-profile" *ngIf="!vExibir">
+            <app-leo-profile [vReg]="vRegDetalhe" (exibir)="fMudaView($event)"></app-leo-profile>
+    </div>
+</div>

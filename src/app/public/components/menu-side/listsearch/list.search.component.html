@@ -1,0 +1,14 @@
+<ul class="lista-pesq" style="width: 100%">
+    <li  *ngFor="let dp of dplistagem | InputSearch : vPesq " >
+       <div class="card" (click)="fSelecionaLista(dp.codigo)">
+               <div class="card-body">
+                   <small class="card-title">{{dp.email}}</small>
+                   <p class="card-text">
+                       {{dp.nome}}<br>
+                       <small>{{dp.cpf}}</small>
+                    </p>
+                   
+               </div>
+       </div>    
+    </li>
+</ul>

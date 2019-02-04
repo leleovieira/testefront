@@ -1,0 +1,14 @@
+
+<div class="fixed-top mb-5">
+    <app-leo-alert></app-leo-alert> </div>    
+<div  class="area-app " [ngClass]="{'toggled': global.vExibeMenu}">
+    <app-leo-menu #MENUNAV></app-leo-menu>
+    <div id="page-content-wrapper" class="area-conteudo">
+                      <app-leo-topbar   [list_scoreboard]="MENUNAV.fGetPlacar()"
+                                    [leg_title]='legend_title' 
+                                    [menu_rota]="dprota_public">
+                      </app-leo-topbar>
+                       
+                      <app-leo-view-public></app-leo-view-public>
+    </div>
+</div>

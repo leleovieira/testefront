@@ -1,0 +1,60 @@
+        <div class="d-xl-none text-right">
+                <a class="btn btn-xs" 
+                (click)="fExibeView()">
+                <i class="fa fa-cog"></i>
+                </a>
+        </div>
+     
+        <div class="text-center mt-5">
+                <a class="btn btn-link " (click)="fMudaView()">
+                        <i class='fa fa-arrow-left  ' style='font-size:16px'></i>
+                </a>
+                <img class=" rounded-circle mx-float mr-5  img-thumbnail"
+                     [src]="vReg.thumb"
+                     alt="User picture">
+        </div>
+       
+
+        <div class="card area-detalhes-profile" >
+                <div class="card-body titulo">
+                    <h6 class="card-title text-center">
+                        {{vReg.nome}}
+                        <br>
+                        <small>CPF : {{vReg.cpf}}       Cód:{{vReg.codigo}}</small>
+                    </h6>
+                 </div>
+                 <div class="card-body item">
+                        <small class="card-title text-center">INFORMAÇÕES IMPORTANTES</small>
+                        <p class="card-text">{{vReg.obs}}</p>
+                </div>
+                <div class="card-body item">
+                        <small class="card-title text-center">EMAIL</small>
+                        <p class="card-text">{{vReg.email}}</p>
+                </div>
+                
+                 <div class="card-body item">
+                        <small class="card-title text-center">TELEFONE</small>
+                        <p class="card-text">
+                            {{vReg.telefone.pais }}
+                            {{vReg.telefone.area }}
+                            {{vReg.telefone.numero }}
+                        </p>
+                </div>
+                <div class="card-body item">
+                        <small class="card-title text-center">ENDEREÇO</small>
+                        <p class="card-text">
+                                {{vReg.endereco.tipo }}
+                                {{vReg.endereco.logradouro }}
+                                {{vReg.endereco.numero }}  ,
+                                {{vReg.endereco.complemento }} , 
+                                {{vReg.endereco.bairro }} - 
+                                {{vReg.endereco.cidade }} -    
+                                {{vReg.endereco.Estado }} -
+                                {{vReg.endereco.Pais }} 
+                       </p>
+                </div>
+
+
+               
+        </div>
+ 
